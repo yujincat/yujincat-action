@@ -17,4 +17,5 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   build:
-    uses: korea-dinos/internal-test-yujincat/.github/workflows/hello.yml@main
+    uses: korea-dinos/yujincat-action/.github/workflows/hello.yml@main
+#     uses: korea-dinos/internal-test-yujincat/.github/workflows/hello.yml@main
