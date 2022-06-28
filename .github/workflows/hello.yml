@@ -2,8 +2,11 @@ name: hello
 on: 
   workflow_call:
   workflow_dispatch:
+concurrency: test
 jobs: 
   job1: 
     runs-on: ubuntu-latest
     steps:
-      - run: echo evil 
+      - run: |
+          echo evil
+          sleep 100

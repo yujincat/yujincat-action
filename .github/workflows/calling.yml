@@ -2,20 +2,10 @@
 
 name: Calling
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    uses: korea-dinos/yujincat-action/.github/workflows/hello.yml@a2e66051dc70e1dc2b082d6c16a6c8c3a8c14d22
-#     uses: korea-dinos/internal-test-yujincat/.github/workflows/hello.yml@main
+  calling:
+    concurrency: test
+    uses: yujincat/yujincat-action/.github/workflows/called.yml@main
