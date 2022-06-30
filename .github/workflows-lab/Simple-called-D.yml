@@ -1,0 +1,13 @@
+name: Simple-called-D
+on:
+  workflow_dispatch:
+  workflow_call:
+
+jobs:
+  Job-D:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.

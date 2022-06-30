@@ -1,0 +1,15 @@
+name: Simple Caller A
+on:
+  workflow_dispatch:
+jobs:
+  calling-job-A:
+    uses: yujincat/yujincat-action/.github/workflows-lab/Simple-called-B.yml@main
+
+  normal-job-A:
+    needs: calling-job-A
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
